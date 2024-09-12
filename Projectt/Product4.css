@@ -1,0 +1,215 @@
+.container{
+    float: right;
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    background-color: #ffffff !important;
+}
+.navbar{
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+.bg-body-tertiary{
+    --bs-tertiary-bg-rgb: var(--bs-tertiary-bg-rgb)
+}
+#logo{
+    margin-left: 20px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    margin-bottom: 0px !important;
+    background-color: #ffffff;
+}
+
+li {
+    float: left;
+}
+
+ul li a {
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+    padding: 5px 0;
+    display: inline-block;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+  
+ul li a.active {
+    color: #7C51CA;
+}
+ul li a:hover {
+    color: rgba(63, 63, 63, 1);
+}
+ul li a.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; /* Thicker underline */
+    background-color: #7C51CA;
+    position: absolute;
+    bottom: 0px; /* Adjusts the underline position */
+    left: 0;
+}
+@keyframes navbar {
+    from {width: 0%;}
+    to {width: 100%;}
+  }
+ul li a:hover:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; /* Thicker underline */
+    background-color: rgba(63, 63, 63, 1);
+    position: absolute;
+    bottom: 0px; /* Adjusts the underline position */
+    left: 0;
+    animation-name: navbar;
+    animation-duration: 0.3s;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f8f8; /* Optional background color */
+    padding: 20px 40px !important;
+}
+.footer{
+    background-color: #191919;
+    color: #fff;
+}
+.footer2{
+    padding: 10px 150px;
+}
+.ht{
+    margin-bottom: 0px;
+    padding-top: 70px;
+    font-size: 28px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+.hb{
+    font-size: 16px;
+    font-family: 'Montserrat';
+    max-width: 240px;
+    color: #8c8c8c;
+}
+.cr{
+    display: flex;
+    justify-content: center;
+    color: #8c8c8c;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    background-color: #191919;
+    font-weight: 200;
+}
+.section1{
+    padding-left: 60px;
+    width: 445px;
+    margin-bottom: 20px;
+}
+.button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 110px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px 40px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    border-radius: 4px;
+  }
+.button3 {
+  background-color: #7C51CA; 
+  color: white;
+}
+  
+.button3:hover {
+    background-color: #191919;
+    color: white;
+  }
+.img{
+    margin-top: -640;
+    margin-left: 600px;
+    box-shadow: 10px 10px 8px 0 rgba(0, 0, 0, 0.2);
+}
+h2{
+    font-size: 23px !important;
+    font-family: 'Montserrat' !important;
+    font-weight: bold !important;
+    margin-bottom: 20px !important;
+}
+h5{
+    font-family: 'Montserrat' !important;
+    font-weight: 400 !important;
+    margin-bottom: 20px !important;
+    font-size: 22px !important;
+}
+h6{
+    font-family: 'Montserrat';
+    margin-bottom: 10px !important;
+    font-weight: 550 !important;
+    color:var(--bs-warning) !important;
+}
+.disc{
+    font-family: 'Montserrat' !important;
+    color: #3f3f3f !important;
+    font-weight: 300 !important;
+}
+.text1{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    color: rgba(63, 63, 63, 1);
+    font-weight: bold;
+    margin-top: 80px;
+}
+.layout-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+figure{
+    padding-bottom: 40px;
+}
+figcaption{
+    text-align: left;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    color: black;
+}
+figcaption1{
+    text-align: left;
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    color: black;
+}
+.y1{
+    border-radius: 16px;
+    height: 395px;
+    padding: 10px;
+    filter: grayscale(100%);
+}
+.y1:hover {
+    filter: grayscale(0%);
+    transition-duration: 0.4s;
+}
