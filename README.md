@@ -1,5 +1,13 @@
 <h1>THIS WEBSITE IS NOT HOSTED OR EVEN FULLY FUNCTIONAL IT IS FOR LEARNING PURPOSE ONLY!!</h1>
+Over the past couple of months, I have worked hard on this project, and while it's far from finished, I wanted to share the progress I've made and the knowledge I've gained. I'm now able to build a decent UX/UI interface, link it with a database, and add simple functionality to the site.
+<br><br>
+So far, I've created a "user" database with a registration and login form (shown in the pictures below). Additionally, I've added a "product" database with an inventory management system that displays four variables: 'Product Name', 'Price', 'Stock Quantity', and 'Product Image'. I also implemented three stock status cases based on quantity:<br>
+"In Stock"<br>
+"Only [number from 5 to 1] left in stock"<br>
+"Out of Stock"<br><br>
 
+I was able to achieve all of this thanks to the Information Technology Institute (ITI).
+___
 <h3>How to install and run the site locally:</h3>
 
 Step 1 : download all the files and make sure they are all in a folder called "Projectt"<br><br>
