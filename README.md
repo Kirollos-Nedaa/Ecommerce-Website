@@ -12,7 +12,7 @@ ___
 
 Step 1 : download all the files and make sure they are all in a folder called "Projectt"<br><br>
 Step 2 : you have to download a local hosting server like XAMP or WAMP for Windows.<br><br>
-Step 3 : you will have MYSQL my default so just inport the 2 databases included in the filles.<br><br>
+Step 3 : you will have MYSQL by default so just import the 2 tables included in the "database" folder and make sure you create 2 databases the first will be "products" and import the "inventory.sql" table to it and the second will be called "register" and import "users.sql"to it.<br><br>
 Step 4 : if you are using XAMP place the "Projectt" folder into "\xamp\htdocs" to access this directory go to where XAMP was installed, and for WAMP place the "Projectt" folder into "\wamp\www"<br><br>
 Step 5 : to get to the home page, open any browser and type "localhost/Projectt/Home.php" for XAMP and for WAMP type "localhost/Home.php"
 ___
