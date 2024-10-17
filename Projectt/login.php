@@ -1,35 +1,46 @@
 <?php
-    //Store the signe in user
     session_start();
+
+    // Store the URL of the previous page
+    if(!isset($_SESSION['prev_url'])) {
+        $_SESSION['prev_url'] = $_SERVER['HTTP_REFERER'];
+    }
+
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        //Connect to database
+        // Connect to the database
         $conn = mysqli_connect("localhost", "root", "", "register");
-        if(! $conn){
+        if(!$conn){
             echo mysqli_connect_error();
             exit;
         }
     
-    //Avoid SQL injection
-    $email = mysqli_escape_string($conn, $_POST['email']);
-    $password = mysqli_escape_string($conn, $_POST['password']);
+        // Avoid SQL injection
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-    //Select
-    $query = "SELECT * FROM `users` WHERE `email` = '".$email."' and `password` = '".$password."' LIMIT 1";
-    $result = mysqli_query($conn, $query);
-    if ($row = mysqli_fetch_assoc($result)){
-        $_SESSION['id'] = $row['id'];
-        $_SESSION['email'] = $row['email'];
-        $_SESSION['fname'] = $row['fname'];
-        header("Location: Home.php");
-        exit;
-    }   else {
-        $error= '<div class="error-text">Invalid email or password</div>';
+        // Select
+        $query = "SELECT * FROM `users` WHERE `email` = '".$email."' and `password` = '".$password."' LIMIT 1";
+        $result = mysqli_query($conn, $query);
+        if ($row = mysqli_fetch_assoc($result)){
+            $_SESSION['id'] = $row['id'];
+            $_SESSION['email'] = $row['email'];
+            $_SESSION['fname'] = $row['fname'];
+
+            // Redirect to the stored URL or a default page if the previous URL is not set
+            $redirectUrl = isset($_SESSION['prev_url']) ? $_SESSION['prev_url'] : 'home.php';
+            unset($_SESSION['prev_url']); // Clear the stored URL after redirection
+            header("Location: " . $redirectUrl);
+            exit;
+        } else {
+            $error = '<div class="error-text">Invalid email or password</div>';
+        }
+
+        // Close the connection
+        mysqli_free_result($result);
+        mysqli_close($conn);
     }
-    //Close the connection
-    mysqli_free_result($result);
-    mysqli_close($conn);
-}
 ?>
+
 
 <html lang="en">
 <head>
@@ -49,7 +60,7 @@
             </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password">
+                    <input type="password" class="form-control" id="password" name="password">
                 </div>
                 <?php if(isset($error)) echo $error; ?>
                 <div class="form-actions">

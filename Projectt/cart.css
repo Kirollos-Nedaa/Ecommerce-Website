@@ -1,0 +1,92 @@
+.custom-modal {
+    max-width: none !important; /* Disable Bootstrap's max-width */
+    width: auto !important; /*Width adjusts based on content */
+    display: inline-block !important; /* Allows the modal width to adjust to content */
+}
+
+.modal-body-scrollable {
+    max-height: 70vh !important; /* Limit the modal body height */
+    overflow-y: auto !important; /* Enable vertical scrolling if content exceeds height */
+}
+
+.modal-dialog-centered {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+
+.product-title {
+    font-size: 1.25rem !important;
+    margin-bottom: 10px !important;
+    color: #333 !important;
+    font-weight: 600 !important;
+}
+
+.product-text {
+    font-size: 1rem !important;
+    color: #666 !important;
+    margin-bottom: 15px !important;
+}
+
+.remove { 
+    align-self: flex-end !important;
+    padding: 8px 12px !important;
+    border-color: #dc3545 !important;
+    color: #dc3545 !important;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    transition: 0.3s ease !important;
+}
+.remove:hover {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+}
+.product-cart {
+    display: flex !important;
+    align-items: center !important;
+    border: 1px solid #191919 !important;
+    border-radius: 4px !important;
+    padding: 15px !important;
+    background-color: #f9f9f9 !important;
+    margin-bottom: 20px !important;
+    max-width: 600px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-img {
+    width: 150px !important;
+    height: auto !important;
+    border-radius: 4px !important;
+    margin-right: 20px !important;
+}
+.product-body {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+}
+.quantity-btn {
+    background-color: none; /* Light gray background */
+    border: none; /* Light gray border */
+    border-radius: none; /* Rounded corners */
+    color: gray; /* Dark text color */
+    font-size: 16px; /* Slightly larger text */
+    width: 30px; /* Fixed width */
+    height: 30px; /* Fixed height */
+    display: inline-flex; /* Center content horizontally and vertically */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 0 5px; /* Space between buttons and quantity */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+}
+
+.quantity-btn:hover {
+    color: #191919; /* Slightly darker gray on hover */
+    border-color: none; /* Darker border color on hover */
+    font-weight: bolder;
+}
+
+.quantity-btn:active {
+    background-color: #a18cc9; /* Even darker gray when pressed */
+}

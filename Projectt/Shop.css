@@ -1,3 +1,9 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+.bg-body-tertiary{
+    background-color: #ffffff !important;
+}
 .container{
     float: right;
     padding-left: 80px !important;
@@ -10,28 +16,25 @@
     padding-top: 12px !important;
     padding-bottom: 12px !important;
 }
-.bg-body-tertiary{
-    --bs-tertiary-bg-rgb: var(--bs-tertiary-bg-rgb)
-}
 #logo{
     margin-left: 20px;
 }
-ul {
+.navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    font-family: 'Montserrat';
-    text-transform: uppercase;
+    font-family: 'Montserrat' !important;
+    text-transform: uppercase !important;
     margin-bottom: 0px !important;
-    background-color: #ffffff;
+    background-color: #ffffff !important;
 }
 
-li {
+.navbar li {
     float: left;
 }
 
-ul li a {
+.navbar ul li a{
     text-decoration: none;
     color: gray;
     font-weight: bold;
@@ -44,13 +47,13 @@ ul li a {
     margin-right: 10px;
 }
   
-ul li a.active {
+.navbar ul li a.active{
     color: #7C51CA;
 }
-ul li a:hover {
+.navbar ul li a:hover{
     color: rgba(63, 63, 63, 1);
 }
-ul li a.active::after {
+.navbar ul li a.active::after {
     content: '';
     display: block;
     width: 100%;
@@ -64,7 +67,7 @@ ul li a.active::after {
     from {width: 0%;}
     to {width: 100%;}
   }
-ul li a:hover:after {
+.navbar ul li a:hover:after {
     content: '';
     display: block;
     width: 100%;
@@ -76,12 +79,66 @@ ul li a:hover:after {
     animation-name: navbar;
     animation-duration: 0.3s;
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: 3px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.user-text{
+    text-decoration: none;
+    color: rgba(63, 63, 63, 1);
+    font-weight: bold;
+    padding: 5px 0;
+    display: inline-block;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.user-login{
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+    padding: 5px 0;
+    display: inline-block;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f8f8; /* Optional background color */
+    padding: 20px 40px !important;
+}
 .footer{
     background-color: #191919;
     color: #fff;
 }
 .footer2{
     padding: 10px 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
 }
 .ht{
     margin-bottom: 0px;
@@ -104,4 +161,153 @@ ul li a:hover:after {
     font-size: 13px;
     background-color: #191919;
     font-weight: 200;
+}
+.badge{
+    margin-left: 10px !important;
+}
+.fas {
+    font-size: 25px;
+    color: gray;
+    position: absolute;
+    translate: -15px -7px;
+}
+.fas:hover {
+    color:#191919;
+}
+
+
+.custom-modal {
+    max-width: none !important; /* Disable Bootstrap's max-width */
+    width: auto !important; /*Width adjusts based on content */
+    display: inline-block !important; /* Allows the modal width to adjust to content */
+}
+
+.modal-body-scrollable {
+    max-height: 70vh !important; /* Limit the modal body height */
+    overflow-y: auto !important; /* Enable vertical scrolling if content exceeds height */
+}
+
+.modal-dialog-centered {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+
+.product-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.remove { 
+    align-self: flex-end;
+    padding: 8px 12px;
+    border-color: #dc3545;
+    color: #dc3545;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+.remove:hover {
+    background-color: #dc3545;
+    color: #fff ;
+}
+.product-cart {
+    display: flex;
+    align-items: center;
+    border: 1px solid #191919;
+    border-radius: 4px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+    width: 150px;
+    height: auto;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+.product-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.card-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+.card {
+    margin-bottom: 20px;
+}
+.card-img-top{
+    /* width: 405px; */
+    height: 405px;
+}
+.card-title {
+    font-weight: 650;
+    font-family: 'Montserrat';
+}
+.card-text {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+}
+#card-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.detailes{
+    background-color: #7C51CA;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.detailes:hover{
+    background-color: #191919;
+}
+.detailes:active{
+    background-color: #404040 !important;
+}
+.btn-outline{
+    border-color: #7C51CA;
+    color: #7C51CA;
+    font-family: 'Montserrat';
+    font-weight: 650;
+    border-width: 2;
+}
+.btn-outline:hover{
+    outline-color: none;
+    background-color: #7C51CA;
+    color: #fff;
+}
+.btn-outline:active{
+    background-color: #7c51ca !important;
+    color: #fff !important;
+}
+.form-control{
+    color: #191919 !important;
+    border-color: #7C51CA !important;
+    border-width: 2;
+}
+.form-control:focus {
+    outline: none !important;
+    box-shadow: 0 0 10px 2px rgba(124, 81, 202, 1);
+  }
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+.row{
+    justify-content: flex-start !important;
 }
