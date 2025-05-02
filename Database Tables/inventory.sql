@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `inventory`
 --
 
-CREATE TABLE `inventory` (
+CREATE TABLE `Inventory` (
   `id` int(11) NOT NULL,
   `name` varchar(100) DEFAULT NULL,
   `quantity` int(11) DEFAULT NULL,
