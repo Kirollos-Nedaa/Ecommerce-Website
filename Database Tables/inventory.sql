@@ -18,16 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `products`
+-- Database: `neptuno`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `inventory`
+-- Table structure for table `inventoryy`
 --
 
-CREATE TABLE `Inventory` (
+CREATE TABLE `inventoryy` (
   `id` int(11) NOT NULL,
   `name` varchar(100) DEFAULT NULL,
   `quantity` int(11) DEFAULT NULL,
@@ -36,10 +36,10 @@ CREATE TABLE `Inventory` (
 );
 
 --
--- Dumping data for table `inventory`
+-- Dumping data for table `inventoryy`
 --
 
-INSERT INTO `inventory` (`id`, `name`, `quantity`, `price`, `image`) VALUES
+INSERT INTO `inventoryy` (`id`, `name`, `quantity`, `price`, `image`) VALUES
 (1, 'Black Dressy Shoes', 2, 20.00, 'https://d2j6dbq0eux0bg.cloudfront.net/images/17298759/1107715196.jpg'),
 (2, 'Tweed Crop Top & Trouser Set', 7, 40.00, 'https://d2j6dbq0eux0bg.cloudfront.net/images/17298759/1107715178.jpg'),
 (3, 'Funky Fresh Retro Jacket', 10, 0.00, NULL),
@@ -54,9 +54,9 @@ INSERT INTO `inventory` (`id`, `name`, `quantity`, `price`, `image`) VALUES
 --
 
 --
--- Indexes for table `inventory`
+-- Indexes for table `inventoryy`
 --
-ALTER TABLE `inventory`
+ALTER TABLE `inventoryy`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -64,9 +64,9 @@ ALTER TABLE `inventory`
 --
 
 --
--- AUTO_INCREMENT for table `inventory`
+-- AUTO_INCREMENT for table `inventoryy`
 --
-ALTER TABLE `inventory`
+ALTER TABLE `inventoryy`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
